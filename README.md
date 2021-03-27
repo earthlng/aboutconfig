@@ -9,7 +9,7 @@ Mostly copied from https://github.com/xiaoxiaoflood/firefox-scripts, all credit 
 
 1. download and extract the [master.zip](https://github.com/earthlng/aboutconfig/archive/main.zip)
 2. copy the files/folders from `installdir` into your Firefox installation folder and the `chrome` folder from `profile` into your profile directory
-3. load `about:support` and click the button "Clear startup cache..."
+3. load `about:support` and click the button "Clear startup cache..." (not sure if this is really necessary)
 4. restart Firefox
 5. you can now access the old `about:config` via `chrome://userchromejs/content/aboutconfig/config.xhtml`
 
