@@ -2,7 +2,7 @@
 
 The bare minimum to keep the old XUL-based `about:config` version available in Firefox 87+
 
-Mostly copied from https://github.com/xiaoxiaoflood/firefox-scripts, all credit goes to him/her.
+Mostly copied from https://github.com/xiaoxiaoflood/firefox-scripts, all credit goes to them.
 
 
 ## Installation
