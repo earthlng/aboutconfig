@@ -17,9 +17,8 @@ Mostly copied from https://github.com/xiaoxiaoflood/firefox-scripts, all credit 
 ### How it works
 
 - `autoconfig.js` tells Firefox to load the autoconfig file `_autoconfig.cfg`
-  - `_autoconfig.cfg` tells Firefox to look for (and load) `/chrome/utils/boot.jsm` in any profile running under this installation
-    - `boot.jsm` instructs Firefox to load the `chrome.manifest`
-      - `chrome.manifest` registers a `chrome://` namespace `userchromejs`
+  - `_autoconfig.cfg` tells Firefox to load the `chrome.manifest` from the chrome directory in the profile folder
+    - `chrome.manifest` registers a `chrome://` namespace `userchromejs`
       
       
 #### original files + modifications made
