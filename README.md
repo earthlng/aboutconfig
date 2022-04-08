@@ -16,7 +16,7 @@ All credit goes to [@aminomancer](https://github.com/aminomancer/) for the idea 
 5. you can now access the old `about:config` via `chrome://userchromejs/content/aboutconfig/config.xhtml`
 
 Optionally you can also let the script register an `about:cfg` page. To do that, copy/move `aboutcfg.jsm` into the `profile/chrome/utils/` folder
-and remove the 2 slashes on the 2nd-to-last line in the `_autoconfig.cfg` file.<br>
+and uncomment the 2nd-to-last line in the `_autoconfig.cfg` file.<br>
 Now you can access the old about:config page at `about:cfg` !
 
 ### How it works
