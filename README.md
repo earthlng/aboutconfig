@@ -4,6 +4,8 @@ The bare minimum to keep the old XUL-based `about:config` version available in F
 
 Mostly copied from https://github.com/xiaoxiaoflood/firefox-scripts, all credit goes to them.
 
+All credit goes to [@aminomancer](https://github.com/aminomancer/) for the idea and the code for registering a proper about: page!
+
 
 ## Installation
 
@@ -13,6 +15,9 @@ Mostly copied from https://github.com/xiaoxiaoflood/firefox-scripts, all credit 
 4. restart Firefox
 5. you can now access the old `about:config` via `chrome://userchromejs/content/aboutconfig/config.xhtml`
 
+Optionally you can also let the script register an `about:cfg` page. To do that, copy/move `aboutcfg.jsm` into the `profile/chrome/utils/` folder
+and remove the 2 slashes on the 2nd-to-last line in the `_autoconfig.cfg` file.<br>
+Now you can access the old about:config page at `about:cfg` !
 
 ### How it works
 
