@@ -1,5 +1,3 @@
-let EXPORTED_SYMBOLS = [];
-
 /*** register an about:cfg page ...
  *
  * We're not just faking it, this makes it a bona-fide about: page.
@@ -30,22 +28,12 @@ let EXPORTED_SYMBOLS = [];
   // generate a unique ID on every app launch. protection against the very unlikely possibility that a
   // future update adds a component with the same class ID, which would break the script.
   function generateFreeCID() {
-    let uuid = Components.ID(
-      Cc["@mozilla.org/uuid-generator;1"]
-        .getService(Ci.nsIUUIDGenerator)
-        .generateUUID()
-        .toString()
-    );
+    let uuid = Components.ID(Services.uuid.generateUUID().toString());
     // I can't tell whether generateUUID is guaranteed to produce a unique ID, or just a random ID.
     // so I add this loop to regenerate it in the extremely unlikely (or potentially impossible)
     // event that the UUID is already registered as a CID.
     while (registrar.isCIDRegistered(uuid)) {
-      uuid = Components.ID(
-        Cc["@mozilla.org/uuid-generator;1"]
-          .getService(Ci.nsIUUIDGenerator)
-          .generateUUID()
-          .toString()
-      );
+      uuid = Components.ID(Services.uuid.generateUUID().toString());
     }
     return uuid;
   }
@@ -74,10 +62,7 @@ let EXPORTED_SYMBOLS = [];
   };
 
   var AboutModuleFactory = {
-    createInstance(aOuter, aIID) {
-      if (aOuter) {
-        throw Components.Exception("", Cr.NS_ERROR_NO_AGGREGATION);
-      }
+    createInstance(aIID) {
       return new VintageAboutConfig().QueryInterface(aIID);
     },
     QueryInterface: ChromeUtils.generateQI(["nsIFactory"]),
@@ -91,3 +76,5 @@ let EXPORTED_SYMBOLS = [];
   );
 
 })();
+
+let EXPORTED_SYMBOLS = [];
