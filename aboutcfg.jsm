@@ -15,7 +15,7 @@
  ***/
 
 (() => {
-  const { Services } = ChromeUtils.import("resource://gre/modules/Services.jsm");
+  //const { Services } = ChromeUtils.import("resource://gre/modules/Services.jsm");
   let { classes: Cc, interfaces: Ci, manager: Cm, utils: Cu, results: Cr } = Components;
   const registrar = Cm.QueryInterface(Ci.nsIComponentRegistrar);
 
