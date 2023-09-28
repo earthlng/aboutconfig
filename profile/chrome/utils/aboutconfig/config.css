@@ -47,3 +47,7 @@
 #configTreeBody::-moz-tree-cell-text(locked) {
   font-style: italic;
 }
+
+.deck-selected {
+  max-width: 100vw;
+}
