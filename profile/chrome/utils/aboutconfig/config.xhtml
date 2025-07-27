@@ -68,8 +68,7 @@
   <vbox flex="1">
     <hbox id="filterRow" align="center">
       <label value="Search:" accesskey="r" control="textbox"/>
-      <search-textbox id="textbox" flex="1"
-                      aria-controls="configTree"/>
+      <html:moz-input-search id="textbox" aria-controls="configTree"/>
     </hbox>
     <tree id="configTree" flex="1" seltype="single"
           enableColumnDrag="true" context="configContext">
